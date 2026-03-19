@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wshadow -Werror=vla -Wl,--dependency-file=CMakeFiles/esercitazione2_esercizio.dir/link.d CMakeFiles/esercitazione2_esercizio.dir/algoritmo.cpp.o -o esercitazione2_esercizio

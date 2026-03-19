@@ -1,0 +1,9 @@
+Il programma stampa:
+x: 0
+Indirizzo di ad[0]: 0x7ffc6b2396a0
+Indirizzo di af[0]: 0x7ffc6b239680
+Indirizzo di ai[0]: 0x7ffc6b239674
+Indirizzo di x: 0x7ffc6b239670
+Indirizzo di y: 0x7ffc6b23966c
+
+Nella riga 12, con (&y)[1] = 0, andiamo alla cella di memoria che ha indirizzo uguale all'indirizzo di y aumentato di 4 e scriviamo uno 0. Questa zona di memoria è x, perché le variabili vengono memorizzate in genere nell'ordine inverso rispetto a quello in cui le definisco (infatti gli indirizzi di x e y sono molto vicini, distano 4 byte che è esattamente sizeof(float)), quindi il comando della riga 12 fa sì che la memoria di x (che vale 1) venga sovrascritta dal nuovo valore assegnato, cioè 0. Questo spiega perché effettivamente stampando x il risultato è 0.
